@@ -8,7 +8,7 @@ for (i = 0; i < 8; i += 1) {
 }
 
 if (result.toString().startsWith('y')) {
-    console.log(("Awesome, heres a random telephone number! :"),phoneNumber.join(""))
+    console.log(("Awesome, heres a random telephone number! :"),(`+47 ${phoneNumber.join("")}`))
 } else if (result.toString().startsWith('n')) {
     console.log(('Goodbye.'))
 } else if (result !== 'y') {
