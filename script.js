@@ -7,6 +7,9 @@ for (i = 0; i < 8; i += 1) {
     phoneNumber[i] = Math.round(Math.random() * 9)
 }
 
+phoneNumber.splice(3, 0, ' ')
+phoneNumber.splice(6, 0, ' ')
+
 if (result.toString().startsWith('y')) {
     console.log(("Awesome, heres a random telephone number! :"),(`+47 ${phoneNumber.join("")}`))
 } else if (result.toString().startsWith('n')) {
