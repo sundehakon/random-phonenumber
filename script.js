@@ -11,7 +11,7 @@ phoneNumber.splice(3, 0, ' ')
 phoneNumber.splice(6, 0, ' ')
 
 if (result.toString().startsWith('y')) {
-    console.log(("Awesome, heres a random telephone number! :"),(`+47 ${phoneNumber.join("")}`))
+    console.log(("Awesome, here's a random telephone number! :"),(`+47 ${phoneNumber.join("")}`))
 } else if (result.toString().startsWith('n')) {
     console.log(('Goodbye.'))
 } else if (result !== 'y') {
