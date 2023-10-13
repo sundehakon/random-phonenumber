@@ -14,17 +14,17 @@ if (result.toString().startsWith('n')) {
     console.log(("Here's a random Norwegian telephone number! :"),(`+47 ${phoneNumber.join("")}`))
 } else if (result.toString().startsWith('a')) {
     const usPhoneNumber = [];
-    const areaCode = [];
+    const areaCode = ['259', '321', '982'];
 
-    for (i = 0; i < 3; i += 1) {
-        areaCode[i] = Math.round(Math.random() * 9)
-    }
+    const randomAreaCodeIndex = Math.floor(Math.random() * areaCode.length);
+
+    const randomAreaCode = areaCode[randomAreaCodeIndex];
 
     for (i = 0; i < 7; i += 1) {
         usPhoneNumber[i] = Math.round(Math.random() * 9)
     }
     
-    console.log(("Here's a random American telephone number!"), (`(${areaCode.join("")}) ${usPhoneNumber.slice(0, 3).join("")}-${usPhoneNumber.slice(3).join("")}`))
+    console.log(("Here's a random American telephone number!"), (`(${randomAreaCode}) ${usPhoneNumber.slice(0, 3).join("")}-${usPhoneNumber.slice(3).join("")}`))
     console.log("PS! Area code might be wrong, we're working on a solution.")
 } else if (result !== 'a') {
     console.log("Please enter either a or n")
