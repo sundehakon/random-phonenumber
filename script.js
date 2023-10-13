@@ -1,6 +1,6 @@
 const prompt = require('prompt-sync')();
 
-const result = prompt("Do you want a Norwegian, or American phone number? (u/n)");
+const result = prompt("Do you want a Norwegian, or American phone number? (a/n)");
 
 if (result.toString().startsWith('n')) {
     const phoneNumber = [];
@@ -19,8 +19,8 @@ if (result.toString().startsWith('n')) {
     }
     
     console.log(("Awesome here's a random American telephone number!"), (`${usPhoneNumber.slice(0, 3).join("")}-${usPhoneNumber.slice(3).join("")}`))
-} else if (result !== 'y') {
-    console.log("Please enter either u or n")
+} else if (result !== 'a') {
+    console.log("Please enter either a or n")
 } else if (result !== 'n') {
-    console.log("Please enter either u or n")
+    console.log("Please enter either a or n")
 }
