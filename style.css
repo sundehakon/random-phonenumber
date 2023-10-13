@@ -1,3 +1,29 @@
 .header {
     text-align: center;
+    font-family: 'Montserrat Alternates', sans-serif;
 }
+
+.search-wrapper {
+    font-family: 'Montserrat Alternates', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    padding: 200px;
+    gap: 20px;
+}
+
+.search-wrapper input {
+    height: 30px;
+    width: 200px;
+}
+
+.footer {
+    position: fixed;     
+    text-align: center;    
+    bottom: 20px; 
+    width: 100%;
+}
+
