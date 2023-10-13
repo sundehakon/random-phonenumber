@@ -15,16 +15,13 @@
         const result = 'n';
         const norwegianPhoneNumber = [];
         
-        if (result.toString().startsWith('n')) {
-            for (i = 0; i < 8; i += 1) {
+        for (i = 0; i < 8; i += 1) {
                 norwegianPhoneNumber[i] = Math.round(Math.random() * 9)
         }
 
     norwegianPhoneNumber.splice(3, 0, ' ')
     norwegianPhoneNumber.splice(6, 0, ' ')
 
-    console.log(("Here's a random Norwegian telephone number! :"),(`+47 ${norwegianPhoneNumber.join("")}`))
-} else if (result.toString().startsWith('a')) {
     const usPhoneNumber = [];
     const usAreaCodes = ['201', '202', '203', '205', '206', '207', '208', 
     '209', '210', '212', '213', '214', '215', '216', '217', '218', '219', '220', '223',
@@ -64,13 +61,13 @@
     for (i = 0; i < 7; i += 1) {
         usPhoneNumber[i] = Math.round(Math.random() * 9)
     }
-}
+
     document.addEventListener("DOMContentLoaded", function() {
         document.querySelector('.norwegian-body').textContent = `+47 ${norwegianPhoneNumber.join("")}`;
     })
 
     document.addEventListener("DOMContentLoaded", function() {
-        document.querySelector('.usa-body').textContent = `(${usAreaCodes} ${usPhoneNumber.join("")}`;
+        document.querySelector('.usa-body').textContent = `(${randomAreaCode}) ${usPhoneNumber.join("")}`;
     })
 
     </script>
