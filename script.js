@@ -7,7 +7,7 @@ if (result.toString().startsWith('n')) {
     for (i = 0; i < 8; i += 1) {
         phoneNumber[i] = Math.round(Math.random() * 9)
     }
-    
+
     phoneNumber.splice(3, 0, ' ')
     phoneNumber.splice(6, 0, ' ')
 
