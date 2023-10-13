@@ -11,7 +11,7 @@
     text-align: center;
     align-items: center;
     margin: auto;
-    padding: 300px;
+    padding: 100px;
     gap: 20px;
 }
 
@@ -31,6 +31,24 @@
     bottom: 20px; 
     width: 100%;
 }
+
+.number-countries {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: .25rem;
+    margin-top: 1rem;
+}
+
+.country {
+    border: 1px solid grey;
+    padding: 5px;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.country > .c-body {
+    color: grey;
+}
+
 
 /*
 .button-55 {

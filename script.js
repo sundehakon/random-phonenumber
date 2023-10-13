@@ -3,10 +3,6 @@ const prompt = require('prompt-sync')();
 
 const result = prompt("Do you want a Norwegian, or American phone number? (n/a)");
 
-let norwegianPhoneNumber;
-let usAreaCodes;
-let usPhoneNumber;
-
 if (result.toString().startsWith('n')) {
     const norwegianPhoneNumber = [];
     for (i = 0; i < 8; i += 1) {
@@ -65,4 +61,4 @@ if (result.toString().startsWith('n')) {
     console.log("Please enter either a or n")
 }
 
-module.exports = {norwegianPhoneNumber, usPhoneNumber, usAreaCodes}
+document.getElementById('c-body').innerHTML = norwegianPhoneNumber;
