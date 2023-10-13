@@ -13,7 +13,12 @@ if (result.toString().startsWith('n')) {
 
     console.log(("Awesome, here's a random Norwegian telephone number! :"),(`+47 ${phoneNumber.join("")}`))
 } else if (result.toString().startsWith('u')) {
-    console.log(("Awesome here's a random American telephone number!"))
+    const usPhoneNumber = [];
+    for (i = 0; i < 7; i += 1) {
+        usPhoneNumber[i] = Math.round(Math.random() * 9)
+    }
+    
+    console.log(("Awesome here's a random American telephone number!"), (`${usPhoneNumber.slice(0, 3).join("")}-${usPhoneNumber.slice(3).join("")}`))
 } else if (result !== 'y') {
     console.log("Please enter either u or n")
 } else if (result !== 'n') {
