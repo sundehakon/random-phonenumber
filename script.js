@@ -1,6 +1,6 @@
 const prompt = require('prompt-sync')();
 
-const result = prompt("Do you want a Norwegian, or American phone number? (a/n)");
+const result = prompt("Do you want a Norwegian, or American phone number? (n/a)");
 
 if (result.toString().startsWith('n')) {
     const phoneNumber = [];
