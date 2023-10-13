@@ -11,14 +11,16 @@ if (result.toString().startsWith('n')) {
     phoneNumber.splice(3, 0, ' ')
     phoneNumber.splice(6, 0, ' ')
 
-    console.log(("Awesome, here's a random Norwegian telephone number! :"),(`+47 ${phoneNumber.join("")}`))
+    console.log(("Here's a random Norwegian telephone number! :"),(`+47 ${phoneNumber.join("")}`))
 } else if (result.toString().startsWith('u')) {
     const usPhoneNumber = [];
+    const areaCode = [];
+
     for (i = 0; i < 7; i += 1) {
         usPhoneNumber[i] = Math.round(Math.random() * 9)
     }
     
-    console.log(("Awesome here's a random American telephone number!"), (`${usPhoneNumber.slice(0, 3).join("")}-${usPhoneNumber.slice(3).join("")}`))
+    console.log(("Here's a random American telephone number!"), (`(${areaCode}) ${usPhoneNumber.slice(0, 3).join("")}-${usPhoneNumber.slice(3).join("")}`))
 } else if (result !== 'a') {
     console.log("Please enter either a or n")
 } else if (result !== 'n') {
