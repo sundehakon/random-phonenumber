@@ -10,3 +10,6 @@ I will be working on a web version of this program soon...
 
 # Click link to test!
 https://playcode.io/1625931
+
+# Credits 
+Thank you to (bennetyee.org) for the US area codes: https://www.bennetyee.org/ucsd-pages/area.html
