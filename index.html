@@ -11,18 +11,31 @@
     <title>Random phone number</title>
 
     <script>
-
-        const result = 'n';
         const norwegianPhoneNumber = [];
         
         for (i = 0; i < 8; i += 1) {
-                norwegianPhoneNumber[i] = Math.round(Math.random() * 9)
+            norwegianPhoneNumber[i] = Math.round(Math.random() * 9)
         }
 
-    norwegianPhoneNumber.splice(3, 0, ' ')
-    norwegianPhoneNumber.splice(6, 0, ' ')
+        norwegianPhoneNumber.splice(3, 0, ' ')
+        norwegianPhoneNumber.splice(6, 0, ' ')
 
-    const usPhoneNumber = [];
+        const usPhoneNumber = [];
+
+        for (i = 0; i < 7; i += 1) {
+            usPhoneNumber[i] = Math.round(Math.random() * 9)
+        }
+
+        usPhoneNumber.splice(3, 0, '-')
+
+        const swedishPhoneNumber = [];
+
+        for (i = 0; i < 9; i += 1) {
+            swedishPhoneNumber[i] = Math.round(Math.random() * 9)
+        }
+
+        swedishPhoneNumber.splice(1, 0, ' ')
+
     const usAreaCodes = ['201', '202', '203', '205', '206', '207', '208', 
     '209', '210', '212', '213', '214', '215', '216', '217', '218', '219', '220', '223',
      '224', '225', '228', '229', '231', '234', '239', '240', '248', '251', '252', '253', 
@@ -58,16 +71,10 @@
 
     const randomAreaCode = usAreaCodes[randomAreaCodeIndex];
 
-    for (i = 0; i < 7; i += 1) {
-        usPhoneNumber[i] = Math.round(Math.random() * 9)
-    }
-
     document.addEventListener("DOMContentLoaded", function() {
         document.querySelector('.norwegian-body').textContent = `+47 ${norwegianPhoneNumber.join("")}`;
-    })
-
-    document.addEventListener("DOMContentLoaded", function() {
         document.querySelector('.usa-body').textContent = `(${randomAreaCode}) ${usPhoneNumber.join("")}`;
+        document.querySelector('.sweden-body').textContent = `+46 ${swedishPhoneNumber.join("")}`;
     })
 
     </script>
@@ -92,6 +99,11 @@
             <div class="country">
                 <div class="c-header">USA</div>
                 <div class="usa-body"></div>
+                <button onclick="window.location.reload();">Refresh</button>
+            </div>
+            <div class="country">
+                <div class="c-header">Sweden</div>
+                <div class="sweden-body"></div>
                 <button onclick="window.location.reload();">Refresh</button>
             </div>
         </div>
