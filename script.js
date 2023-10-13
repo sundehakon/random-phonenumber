@@ -5,7 +5,7 @@ const result = prompt("Do you want a Norwegian, or American phone number? (n/a)"
 
 let norwegianPhoneNumber;
 let usAreaCodes;
-let usPhoneNumber
+let usPhoneNumber;
 
 if (result.toString().startsWith('n')) {
     const norwegianPhoneNumber = [];
