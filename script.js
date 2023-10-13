@@ -1,17 +1,22 @@
+
 const prompt = require('prompt-sync')();
 
 const result = prompt("Do you want a Norwegian, or American phone number? (n/a)");
 
+let norwegianPhoneNumber;
+let usAreaCodes;
+let usPhoneNumber
+
 if (result.toString().startsWith('n')) {
-    const phoneNumber = [];
+    const norwegianPhoneNumber = [];
     for (i = 0; i < 8; i += 1) {
-        phoneNumber[i] = Math.round(Math.random() * 9)
+        norwegianPhoneNumber[i] = Math.round(Math.random() * 9)
     }
 
-    phoneNumber.splice(3, 0, ' ')
-    phoneNumber.splice(6, 0, ' ')
+    norwegianPhoneNumber.splice(3, 0, ' ')
+    norwegianPhoneNumber.splice(6, 0, ' ')
 
-    console.log(("Here's a random Norwegian telephone number! :"),(`+47 ${phoneNumber.join("")}`))
+    console.log(("Here's a random Norwegian telephone number! :"),(`+47 ${norwegianPhoneNumber.join("")}`))
 } else if (result.toString().startsWith('a')) {
     const usPhoneNumber = [];
     const usAreaCodes = ['201', '202', '203', '205', '206', '207', '208', 
@@ -59,3 +64,5 @@ if (result.toString().startsWith('n')) {
 } else if (result !== 'n') {
     console.log("Please enter either a or n")
 }
+
+module.exports = {norwegianPhoneNumber, usPhoneNumber, usAreaCodes}
