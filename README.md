@@ -1,14 +1,10 @@
-# Random-phonenumber
-Generate a random norwegian phone number! 
+# Random Phonenumber
+Generate a random phone number from any country in the world! (still in development)
 
-# US phone number 
-I'm working on creating a new version, where you can choose between getting a random norwegian phone number or, an american one.
-EDIT: US phonenumber should be working right now!
-
-# Web-version
+# Web version
 I will be working on a web version of this program soon...
 
-# Click link to test!
+# Click either link to test!
 https://playcode.io/1625931
 
 https://sundehakon.github.io/random-phonenumber/
