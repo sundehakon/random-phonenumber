@@ -1,6 +1,6 @@
 .header {
     text-align: center;
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Vollkorn', serif;
 }
 
 .search-wrapper {
@@ -23,7 +23,7 @@
 }
 
 #refresh-button:hover {
-    background-color: grey;
+    background-color: rgb(214, 213, 213);
 }
 #searchtitle {
     font-weight: bold;
