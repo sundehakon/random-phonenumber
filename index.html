@@ -12,13 +12,19 @@
 
     <script>
         const norwegianPhoneNumber = [];
+        const danishPhoneNumber = [];
         
         for (i = 0; i < 8; i += 1) {
             norwegianPhoneNumber[i] = Math.round(Math.random() * 9)
+            danishPhoneNumber[i] = Math.round(Math.random() * 9)
         }
 
-        norwegianPhoneNumber.splice(3, 0, ' ')
-        norwegianPhoneNumber.splice(6, 0, ' ')
+        norwegianPhoneNumber.splice(3, 0, ' ');
+        norwegianPhoneNumber.splice(6, 0, ' ');
+
+        danishPhoneNumber.splice(2, 0, ' ');
+        danishPhoneNumber.splice(5, 0, ' ');
+        danishPhoneNumber.splice(8, 0, ' ');
 
         const usPhoneNumber = [];
 
@@ -72,9 +78,10 @@
     const randomAreaCode = usAreaCodes[randomAreaCodeIndex];
 
     document.addEventListener("DOMContentLoaded", function() {
-        document.querySelector('.norwegian-body').textContent = `+47 ${norwegianPhoneNumber.join("")}`;
-        document.querySelector('.usa-body').textContent = `(${randomAreaCode}) ${usPhoneNumber.join("")}`;
-        document.querySelector('.sweden-body').textContent = `+46 ${swedishPhoneNumber.join("")}`;
+        document.querySelector('#norwegian-body').textContent = `+47 ${norwegianPhoneNumber.join("")}`;
+        document.querySelector('#usa-body').textContent = `(${randomAreaCode}) ${usPhoneNumber.join("")}`;
+        document.querySelector('#sweden-body').textContent = `+46 ${swedishPhoneNumber.join("")}`;
+        document.querySelector('#danish-body').textContent = `+45 ${danishPhoneNumber.join("")}`;
     })
 
     </script>
@@ -86,6 +93,7 @@
     <hr>
     <div class="body">
         <div class="search-wrapper">
+            <button onclick="window.location.reload();">Click here for new numbers</button>
             <label for="search" id="searchtitle">Search a country</label>
             <input type="search" id="searchInput">
         </div>
@@ -93,18 +101,19 @@
         <div class="number-countries">
             <div class="country">
                 <div class="c-header">Norway</div>
-                <div class="norwegian-body"></div>
-                <button onclick="window.location.reload();">Refresh</button>
+                <div class="c-body" id="norwegian-body"></div>
             </div>
             <div class="country">
                 <div class="c-header">USA</div>
-                <div class="usa-body"></div>
-                <button onclick="window.location.reload();">Refresh</button>
+                <div class="c-body" id="usa-body"></div>
             </div>
             <div class="country">
                 <div class="c-header">Sweden</div>
-                <div class="sweden-body"></div>
-                <button onclick="window.location.reload();">Refresh</button>
+                <div class="c-body" id="sweden-body"></div>
+            </div>
+            <div class="country">
+                <div class="c-header">Denmark</div>
+                <div class="c-body" id="danish-body"></div>
             </div>
         </div>
     </div>
