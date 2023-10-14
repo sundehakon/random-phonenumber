@@ -1,21 +1,54 @@
+const andorranPhoneNumber = [];
 
-const prompt = require('prompt-sync')();
-
-const result = prompt("Do you want a Norwegian, or American phone number? (n/a)");
-
-if (result.toString().startsWith('n')) {
-    const norwegianPhoneNumber = [];
-    for (i = 0; i < 8; i += 1) {
-        norwegianPhoneNumber[i] = Math.round(Math.random() * 9)
+    for (i = 0; i < 6; i += 1) {
+        andorranPhoneNumber[i] = Math.round(Math.random() * 9)
     }
 
-    norwegianPhoneNumber.splice(3, 0, ' ')
-    norwegianPhoneNumber.splice(6, 0, ' ')
+        andorranPhoneNumber.splice(3, 0, ' ')
 
-    console.log(("Here's a random Norwegian telephone number! :"),(`+47 ${norwegianPhoneNumber.join("")}`))
-} else if (result.toString().startsWith('a')) {
-    const usPhoneNumber = [];
-    const usAreaCodes = ['201', '202', '203', '205', '206', '207', '208', 
+const norwegianPhoneNumber = [];
+const danishPhoneNumber = [];
+        
+    for (i = 0; i < 8; i += 1) {
+        norwegianPhoneNumber[i] = Math.round(Math.random() * 9)
+        danishPhoneNumber[i] = Math.round(Math.random() * 9)
+    }
+
+        norwegianPhoneNumber.splice(3, 0, ' ');
+        norwegianPhoneNumber.splice(6, 0, ' ');
+
+        danishPhoneNumber.splice(2, 0, ' ');
+        danishPhoneNumber.splice(5, 0, ' ');
+        danishPhoneNumber.splice(8, 0, ' ');
+
+const usPhoneNumber = [];
+
+    for (i = 0; i < 7; i += 1) {
+        usPhoneNumber[i] = Math.round(Math.random() * 9)
+    }
+
+        usPhoneNumber.splice(3, 0, '-')
+
+const swedishPhoneNumber = [];
+const afghanistanPhoneNumber = [];
+const albanianPhoneNumber = [];
+const algerianPhoneNumber = [];
+
+    for (i = 0; i < 9; i += 1) {
+        swedishPhoneNumber[i] = Math.round(Math.random() * 9)
+        afghanistanPhoneNumber[i] = Math.round(Math.random() * 9)
+        albanianPhoneNumber[i] = Math.round(Math.random() * 9)
+        algerianPhoneNumber[i] = Math.round(Math.random() * 9)
+    }
+
+        swedishPhoneNumber.splice(1, 0, ' ')
+        afghanistanPhoneNumber.splice(2, 0, ' ')
+        afghanistanPhoneNumber.splice(6, 0, ' ')
+        albanianPhoneNumber.splice(2, 0, ' ')
+        albanianPhoneNumber.splice(6, 0, ' ')
+        algerianPhoneNumber.splice(2, 0, ' ')
+
+const usAreaCodes = ['201', '202', '203', '205', '206', '207', '208', 
     '209', '210', '212', '213', '214', '215', '216', '217', '218', '219', '220', '223',
      '224', '225', '228', '229', '231', '234', '239', '240', '248', '251', '252', '253', 
      '254', '256', '260', '262', '267', '269', '270', '272', '276', '281', '301', '302', 
@@ -46,19 +79,17 @@ if (result.toString().startsWith('n')) {
      '949', '951', '952', '954', '956', '959', '970', '971', '972', '973', '975', '978', 
      '979', '980', '984', '985', '986', '989'];
 
-    const randomAreaCodeIndex = Math.floor(Math.random() * usAreaCodes.length);
+const randomAreaCodeIndex = Math.floor(Math.random() * usAreaCodes.length);
 
-    const randomAreaCode = usAreaCodes[randomAreaCodeIndex];
+const randomAreaCode = usAreaCodes[randomAreaCodeIndex];
 
-    for (i = 0; i < 7; i += 1) {
-        usPhoneNumber[i] = Math.round(Math.random() * 9)
-    }
-    
-    console.log(("Here's a random American telephone number!"), (`(${randomAreaCode}) ${usPhoneNumber.slice(0, 3).join("")}-${usPhoneNumber.slice(3).join("")}`))
-} else if (result !== 'a') {
-    console.log("Please enter either a or n")
-} else if (result !== 'n') {
-    console.log("Please enter either a or n")
-}
-
-document.getElementById('c-body').innerHTML = norwegianPhoneNumber;
+    document.addEventListener("DOMContentLoaded", function() {
+        document.querySelector('#norwegian-body').textContent = `+47 ${norwegianPhoneNumber.join("")}`;
+        document.querySelector('#usa-body').textContent = `(${randomAreaCode}) ${usPhoneNumber.join("")}`;
+        document.querySelector('#sweden-body').textContent = `+46 ${swedishPhoneNumber.join("")}`;
+        document.querySelector('#danish-body').textContent = `+45 ${danishPhoneNumber.join("")}`;
+        document.querySelector('#afghanistan-body').textContent = `+93 ${afghanistanPhoneNumber.join("")}`;
+        document.querySelector('#albanian-body').textContent = `+355 ${albanianPhoneNumber.join("")}`;
+        document.querySelector('#algeria-body').textContent = `+213 ${algerianPhoneNumber.join("")}`;
+        document.querySelector('#andorra-body').textContent = `+376 ${andorranPhoneNumber.join("")}`;
+    })
