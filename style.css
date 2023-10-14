@@ -15,6 +15,16 @@
     gap: 20px;
 }
 
+#refresh-button {
+    border: none;
+    font-weight: bolder;
+    background: none;
+    padding: 10px;
+}
+
+#refresh-button:hover {
+    background-color: grey;
+}
 #searchtitle {
     font-weight: bold;
     font-size: 20px;
