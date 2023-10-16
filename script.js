@@ -22,12 +22,16 @@ const danishPhoneNumber = [];
         danishPhoneNumber.splice(8, 0, ' ');
 
 const usPhoneNumber = [];
+const antiguaandbarbudaPhoneNumber = [];
 
     for (i = 0; i < 7; i += 1) {
         usPhoneNumber[i] = Math.round(Math.random() * 9)
+        antiguaandbarbudaPhoneNumber[i] = Math.round(Math.random() * 9)
     }
 
         usPhoneNumber.splice(3, 0, '-')
+
+        antiguaandbarbudaPhoneNumber.splice(3, 0, '-')
 
 const swedishPhoneNumber = [];
 const afghanistanPhoneNumber = [];
@@ -93,7 +97,7 @@ const randomAreaCode = usAreaCodes[randomAreaCodeIndex];
 
     document.addEventListener("DOMContentLoaded", function() {
         document.querySelector('#norwegian-body').textContent = `+47 ${norwegianPhoneNumber.join("")}`;
-        document.querySelector('#usa-body').textContent = `(${randomAreaCode}) ${usPhoneNumber.join("")}`;
+        document.querySelector('#usa-body').textContent = `+1 (${randomAreaCode}) ${usPhoneNumber.join("")}`;
         document.querySelector('#sweden-body').textContent = `+46 ${swedishPhoneNumber.join("")}`;
         document.querySelector('#danish-body').textContent = `+45 ${danishPhoneNumber.join("")}`;
         document.querySelector('#afghanistan-body').textContent = `+93 ${afghanistanPhoneNumber.join("")}`;
@@ -101,4 +105,5 @@ const randomAreaCode = usAreaCodes[randomAreaCodeIndex];
         document.querySelector('#algeria-body').textContent = `+213 ${algerianPhoneNumber.join("")}`;
         document.querySelector('#andorra-body').textContent = `+376 ${andorranPhoneNumber.join("")}`;
         document.querySelector('#angolan-body').textContent = `+244 ${angolanPhoneNumber.join("")}`;
+        document.querySelector('#antiguanbarbuda-body').textContent = `+1 (268) ${antiguaandbarbudaPhoneNumber.join("")}`;
     })
