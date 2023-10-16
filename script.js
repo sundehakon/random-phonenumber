@@ -33,20 +33,28 @@ const swedishPhoneNumber = [];
 const afghanistanPhoneNumber = [];
 const albanianPhoneNumber = [];
 const algerianPhoneNumber = [];
+const angolanPhoneNumber = [];
 
     for (i = 0; i < 9; i += 1) {
         swedishPhoneNumber[i] = Math.round(Math.random() * 9)
         afghanistanPhoneNumber[i] = Math.round(Math.random() * 9)
         albanianPhoneNumber[i] = Math.round(Math.random() * 9)
         algerianPhoneNumber[i] = Math.round(Math.random() * 9)
+        angolanPhoneNumber[i] = Math.round(Math.random() * 9)
     }
 
         swedishPhoneNumber.splice(1, 0, ' ')
+
         afghanistanPhoneNumber.splice(2, 0, ' ')
         afghanistanPhoneNumber.splice(6, 0, ' ')
+
         albanianPhoneNumber.splice(2, 0, ' ')
         albanianPhoneNumber.splice(6, 0, ' ')
+
         algerianPhoneNumber.splice(2, 0, ' ')
+
+        angolanPhoneNumber.splice(3, 0, ' ')
+        angolanPhoneNumber.splice(7, 0, ' ')
 
 const usAreaCodes = ['201', '202', '203', '205', '206', '207', '208', 
     '209', '210', '212', '213', '214', '215', '216', '217', '218', '219', '220', '223',
@@ -92,4 +100,5 @@ const randomAreaCode = usAreaCodes[randomAreaCodeIndex];
         document.querySelector('#albanian-body').textContent = `+355 ${albanianPhoneNumber.join("")}`;
         document.querySelector('#algeria-body').textContent = `+213 ${algerianPhoneNumber.join("")}`;
         document.querySelector('#andorra-body').textContent = `+376 ${andorranPhoneNumber.join("")}`;
+        document.querySelector('#angolan-body').textContent = `+244 ${angolanPhoneNumber.join("")}`;
     })
