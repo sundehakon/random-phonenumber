@@ -3,8 +3,9 @@ Generate a random phone number from any country in the world! (still in developm
 
 # Web version
 I will be working on a web version of this program soon...
+The program is still in beta!
 
-# Click either link to test!
+# Click either link to test! (BETA version)
 https://playcode.io/1625931
 
 https://sundehakon.github.io/random-phonenumber/
